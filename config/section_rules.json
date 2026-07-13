@@ -1,0 +1,158 @@
+{
+  "company": {
+    "code": "301563",
+    "short_name": "云汉芯城",
+    "full_name": "云汉芯城（上海）互联网科技股份有限公司",
+    "document_type": "首次公开发行股票并在创业板上市招股说明书"
+  },
+  "body_start_pdf_page": 40,
+  "toc_scan_page_limit": 30,
+  "min_heading_font_size": 11.5,
+  "max_heading_chars": 95,
+  "target_chapter_patterns": [
+    "第四节.*发行人基本情况"
+  ],
+  "target_chapter_bonus": 4.0,
+  "toc_bonus": 4.0,
+  "confidence_thresholds": {
+    "high": 24,
+    "medium": 15
+  },
+  "quality": {
+    "min_text_chars": 80,
+    "min_cjk_ratio": 0.03,
+    "max_replacement_chars": 3
+  },
+  "review_markers": [
+    "转下图",
+    "续上图",
+    "如下图",
+    "具体情况如下",
+    "股权结构如下"
+  ],
+  "target_rules": [
+    {
+      "rule_id": "CORE_ESTABLISHMENT_PARENT",
+      "label": "核心章节-发行人设立",
+      "base_score": 18,
+      "title_patterns": [
+        "^二、发行人的设立情况$"
+      ]
+    },
+    {
+      "rule_id": "CORE_ESTABLISHMENT_SUBSECTION",
+      "label": "核心章节-设立与股本演变子章节",
+      "base_score": 16,
+      "title_patterns": [
+        "^\\(一\\)发行人的设立方式$",
+        "^\\(二\\)云汉有限的设立情况$",
+        "^\\(三\\)云汉有限设立以来股本演变情况$"
+      ]
+    },
+    {
+      "rule_id": "CORE_SHAREHOLDER_CHANGE_PARENT",
+      "label": "核心章节-股份公司设立后的股东变化",
+      "base_score": 20,
+      "title_patterns": [
+        "^三、发行人股份公司设立后的股东变化情况$"
+      ]
+    },
+    {
+      "rule_id": "CORE_MIXED_CAPITAL_EVENT",
+      "label": "核心事件章节-增资与股权转让混合披露",
+      "base_score": 22,
+      "title_patterns": [
+        "^\\([一二三四五六七八九十]+\\).*(增加注册资本|增资).*(暨|和).*股权转让.*$"
+      ]
+    },
+    {
+      "rule_id": "CORE_SHARE_TRANSFER_EVENT",
+      "label": "核心事件章节-股权转让",
+      "base_score": 18,
+      "title_patterns": [
+        "^\\([一二三四五六七八九十]+\\).*股权转让.*$"
+      ]
+    },
+    {
+      "rule_id": "CORE_CAPITAL_INCREASE_EVENT",
+      "label": "核心事件章节-增资或增加注册资本",
+      "base_score": 18,
+      "title_patterns": [
+        "^\\([一二三四五六七八九十]+\\).*(增加注册资本|增资).*$"
+      ]
+    },
+    {
+      "rule_id": "CORE_CAPITAL_STRUCTURE_PARENT",
+      "label": "核心章节-发行人股本情况",
+      "base_score": 20,
+      "title_patterns": [
+        "^八、发行人股本情况$"
+      ]
+    },
+    {
+      "rule_id": "CORE_CAPITAL_STRUCTURE_SUBSECTION",
+      "label": "核心章节-发行前股本结构",
+      "base_score": 17,
+      "title_patterns": [
+        "^\\(一\\)本次发行前后的股本情况$",
+        "^\\(二\\)发行前本公司前十名股东$",
+        "^\\(三\\)本次发行前的前十名自然人股东.*$",
+        "^\\(四\\)发行人股本中国有股份及外资股份情况$",
+        "^\\(五\\)最近一年内新增股东的情况$",
+        "^\\(六\\)本次发行前各股东间的关联关系.*$"
+      ]
+    },
+    {
+      "rule_id": "SUPPORT_MAJOR_SHAREHOLDERS",
+      "label": "辅助章节-主要股东及实际控制人",
+      "base_score": 11,
+      "title_patterns": [
+        "^七、发行人主要股东及实际控制人的基本情况$",
+        "^\\(一\\)公司控股股东及实际控制人$",
+        "^\\(二\\)其他持有公司5%以上股份的主要股东$"
+      ]
+    }
+  ],
+  "positive_keywords": {
+    "发行人的设立": 4.0,
+    "设立情况": 3.0,
+    "历史沿革": 4.0,
+    "股本演变": 5.0,
+    "股东变化": 5.0,
+    "整体变更": 4.0,
+    "增资": 5.0,
+    "增加注册资本": 6.0,
+    "新增注册资本": 6.0,
+    "认缴": 3.0,
+    "股权转让": 6.0,
+    "股份转让": 6.0,
+    "转让方": 3.0,
+    "受让方": 3.0,
+    "注册资本": 2.0,
+    "股本情况": 5.0,
+    "股权结构": 4.0,
+    "持股数量": 2.0,
+    "持股比例": 2.0,
+    "发行前": 2.0,
+    "新增股东": 3.0,
+    "入股价格": 3.0,
+    "定价依据": 2.0,
+    "发起人": 2.0
+  },
+  "negative_keywords": {
+    "风险因素": 4.0,
+    "重大事项提示": 3.0,
+    "战略配售": 5.0,
+    "募集资金用途": 5.0,
+    "募集资金运用": 5.0,
+    "投资者保护": 4.0,
+    "股份支付": 3.0,
+    "股权激励": 3.0,
+    "锁定期": 3.0,
+    "现金流量": 2.0,
+    "客户": 1.0,
+    "供应商": 1.0,
+    "关联交易": 3.0,
+    "利润分配": 3.0
+  }
+}
